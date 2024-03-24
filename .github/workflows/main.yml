@@ -36,6 +36,7 @@ jobs:
         run: |
           cd hw2
           echo "${{ secrets.RPC_URL }}" >> .env
+          forge install
           forge test --mt testExploit -vvv
         id: test
 
