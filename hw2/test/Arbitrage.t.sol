@@ -72,18 +72,40 @@ contract Arbitrage is Test {
     }
 
     function testExploit() public {
-        vm.startPrank(arbitrager);
-        uint256 tokensBefore = tokenB.balanceOf(arbitrager);
-        console.log("Before Arbitrage tokenB Balance: %s", tokensBefore);
-        tokenB.approve(address(router), 5 ether);
-        /**
-         * Please add your solution below
-         */
-        /**
-         * Please add your solution above
-         */
-        uint256 tokensAfter = tokenB.balanceOf(arbitrager);
-        assertGt(tokensAfter, 20 ether);
-        console.log("After Arbitrage tokenB Balance: %s", tokensAfter);
-    }
+    vm.startPrank(arbitrager);
+    uint256 tokensBefore = tokenB.balanceOf(arbitrager);
+    console.log("Before Arbitrage tokenB Balance: %s", tokensBefore);
+    tokenB.approve(address(router), 5 ether);
+
+    // Perform the flash loan and arbitrage logic
+    address[] memory path = new address[](2);
+    path[0] = address(tokenB);
+    path[1] = address(tokenA);
+    uint256[] memory amounts = router.swapExactTokensForTokens(
+        5 ether, // amountIn
+        0, // amountOutMin
+        path,
+        address(this),
+        block.timestamp
+    );
+
+    // Perform the reverse trade
+    address[] memory reversePath = new address[](2);
+    reversePath[0] = address(tokenA);
+    reversePath[1] = address(tokenB);
+    uint256[] memory reverseAmounts = router.swapExactTokensForTokens(
+        amounts[1], // amountIn
+        0, // amountOutMin
+        reversePath,
+        address(this),
+        block.timestamp
+    );
+
+    // Ensure profit was made
+    assertGt(reverseAmounts[1], 5 ether);
+
+    uint256 tokensAfter = tokenB.balanceOf(arbitrager);
+    assertGt(tokensAfter, 20 ether);
+    console.log("After Arbitrage tokenB Balance: %s", tokensAfter);
+}
 }
