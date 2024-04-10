@@ -32,7 +32,7 @@ def find_arbitrage_path(liquidity):
                     continue  
                 new_balance = get_amount_out(balance, reserveA if tokenA == last_token else reserveB, reserveB if tokenA == last_token else reserveA)
                 new_path = path + [next_token]
-                if next_token == "tokenB" and len(new_path) > 3 and new_balance > 20.0:
+                if next_token == "tokenB" and len(new_path) > 5 and new_balance > 20.0:
                     return new_path, new_balance
                 elif next_token != "tokenB":
                     paths.append((new_path, new_balance))
