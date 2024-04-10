@@ -82,21 +82,22 @@ contract Arbitrage is Test {
         /**
          * Please add your solution above
          */
-        address[] memory path = new address[](5);
+        address[] memory path = new address[](6); 
         path[0] = address(tokenB);
         path[1] = address(tokenA);
-        path[2] = address(tokenD);
-        path[3] = address(tokenC);
-        path[4] = address(tokenB);
+        path[2] = address(tokenE);
+        path[3] = address(tokenD);
+        path[4] = address(tokenC);
+        path[5] = address(tokenB); 
 
-        // 执行交易
         router.swapExactTokensForTokens(
-            5 ether, // 使用的tokenB数量
-            0,       // 接受的最小tokenB数量，根据实际情况调整
-            path,    // 交换路径
-            arbitrager, // 接收最终代币的地址
-            block.timestamp + 300 // 交易的截止时间
+            5 ether,
+            0,      
+            path,  
+            arbitrager, 
+            block.timestamp + 300
         );
+
 
         uint256 tokensAfter = tokenB.balanceOf(arbitrager);
         assertGt(tokensAfter, 20 ether);
