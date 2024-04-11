@@ -14,21 +14,7 @@ In Automated Market Making (AMM), slippage refers to the difference between the 
 
 Uniswap V2 addresses the issue of slippage by introducing a feature called "Constant Product Market Maker" mechanism. It ensures that the product of the reserve amounts of two assets in a liquidity pool remains constant. This means that as one asset is bought, the supply of that asset decreases and the price increases, preventing large slippage.
 
-def calculate_slippage(initial_reserve_a, initial_reserve_b, trade_amount_a):
-    # Calculate the price before the trade
-    price_before_trade = initial_reserve_b / initial_reserve_a
-    
-    # Calculate the reserve after the trade
-    new_reserve_a = initial_reserve_a + trade_amount_a
-    new_reserve_b = initial_reserve_b - (price_before_trade * trade_amount_a)
-    
-    # Calculate the price after the trade
-    price_after_trade = new_reserve_b / new_reserve_a
-    
-    # Calculate the slippage
-    slippage = abs((price_after_trade - price_before_trade) / price_before_trade) * 100
-    
-    return slippage
+![image](https://github.com/wisley63/Homework2/assets/113053224/41b2ef44-0f76-4019-b9e9-7e18b59ce2a5)
 
 ## Problem 3
 Please examine the mint function in the UniswapV2Pair contract. Upon initial liquidity minting, a minimum liquidity is subtracted. What is the rationale behind this design?
