@@ -5,93 +5,58 @@ Please complete the report problem below:
 ## Problem 1
 Provide your profitable path, the amountIn, amountOut value for each swap, and your final reward (your tokenB balance).
 
-Path: tokenB->tokenA->tokenE->tokenD->tokenC->tokenB
-
-amount_in: 5.0, amount_out: 5.655321988655322
-amount_in: 5.0, amount_out: 0.4865194583384165
-amount_in: 5.0, amount_out: 1.6630525437864887
-amount_in: 5.0, amount_out: 0.49874937468734365
-amount_in: 5.655321988655322, amount_out: 2.372138936383089
-amount_in: 5.655321988655322, amount_out: 2.4587813170979333
-amount_in: 5.655321988655322, amount_out: 1.0583153138066885
-amount_in: 0.4865194583384165, amount_out: 0.7128411757430962
-amount_in: 0.4865194583384165, amount_out: 0.1909367676711635
-amount_in: 0.4865194583384165, amount_out: 0.3700960449182321
-amount_in: 1.6630525437864887, amount_out: 2.333533766053072
-amount_in: 1.6630525437864887, amount_out: 3.6419439695291005
-amount_in: 1.6630525437864887, amount_out: 0.6722816510514321
-amount_in: 0.49874937468734365, amount_out: 1.8995515428188292
-amount_in: 0.49874937468734365, amount_out: 0.5851927901368708
-amount_in: 0.49874937468734365, amount_out: 1.1701334040063442
-amount_in: 2.372138936383089, amount_out: 0.8768809049251629
-amount_in: 2.372138936383089, amount_out: 1.5301371369636168
-amount_in: 2.4587813170979333, amount_out: 5.0889272933015155
-amount_in: 2.4587813170979333, amount_out: 0.9813249894861109
-amount_in: 1.0583153138066885, amount_out: 1.1652391072917359
-amount_in: 1.0583153138066885, amount_out: 2.429786260142227
-amount_in: 0.7128411757430962, amount_out: 0.4071316230430122
-amount_in: 0.7128411757430962, amount_out: 0.16367564504950055
-amount_in: 0.1909367676711635, amount_out: 0.3107014448794441
-amount_in: 0.1909367676711635, amount_out: 0.07906745567404347
-amount_in: 0.3700960449182321, amount_out: 1.4432336466273696
-amount_in: 0.3700960449182321, amount_out: 0.8726854758507169
-amount_in: 2.333533766053072, amount_out: 1.2220531740659872
-amount_in: 2.333533766053072, amount_out: 0.4986881565988928
-amount_in: 3.6419439695291005, amount_out: 3.7570436807443435
-amount_in: 3.6419439695291005, amount_out: 2.131032679121273
-amount_in: 0.6722816510514321, amount_out: 2.4823463117499904
-amount_in: 0.6722816510514321, amount_out: 0.7730615166757577
-amount_in: 1.8995515428188292, amount_out: 1.028162049954426
-amount_in: 1.8995515428188292, amount_out: 1.0089276914225063
-amount_in: 0.5851927901368708, amount_out: 0.846292934221594
-amount_in: 0.5851927901368708, amount_out: 0.22892281507534115
-amount_in: 1.1701334040063442, amount_out: 1.721254447065056
-amount_in: 1.1701334040063442, amount_out: 2.65813717790385
-amount_in: 0.8768809049251629, amount_out: 0.35903943721878817
-amount_in: 1.5301371369636168, amount_out: 3.450741448619708
-amount_in: 5.0889272933015155, amount_out: 2.692729085985291
-amount_in: 0.9813249894861109, amount_out: 1.0897076131383296
-amount_in: 1.1652391072917359, amount_out: 0.44737293755283086
-amount_in: 2.429786260142227, amount_out: 5.038996197252911
-amount_in: 0.4071316230430122, amount_out: 0.16799276206608788
-amount_in: 0.16367564504950055, amount_out: 0.3891032568195987
-amount_in: 0.3107014448794441, amount_out: 0.07268247149804351
-amount_in: 0.07906745567404347, amount_out: 0.32594814886154755
-amount_in: 1.4432336466273696, amount_out: 0.7877736589965701
-amount_in: 0.8726854758507169, amount_out: 1.3222818788111388
-amount_in: 1.2220531740659872, amount_out: 0.8688500498078684
-amount_in: 0.4986881565988928, amount_out: 0.5851251645701201
-amount_in: 3.7570436807443435, amount_out: 0.7568510019597675
-amount_in: 2.131032679121273, amount_out: 6.262412392231384
-amount_in: 2.4823463117499904, amount_out: 1.2856715704476172
-amount_in: 0.7730615166757577, amount_out: 1.091036774998018
-amount_in: 1.028162049954426, amount_out: 0.3964834814790486
-amount_in: 1.0089276914225063, amount_out: 2.3202565868449074
-amount_in: 0.846292934221594, amount_out: 0.47929212181712155
-amount_in: 0.22892281507534115, amount_out: 0.3709853846555979
-amount_in: 1.721254447065056, amount_out: 0.9446798615114286
-amount_in: 2.65813717790385, amount_out: 3.020859972607159
-
-tokenB balance=20.042339589188174
+![image](https://github.com/wisley63/Homework2/assets/113053224/72335582-6cee-49cd-83d0-e9e63c86b879)
 
 ## Problem 2
 What is slippage in AMM, and how does Uniswap V2 address this issue? Please illustrate with a function as an example.
 
-Slippage refers to the difference between the expected price of a trade and the actual price at which the trade is executed. In automated market maker (AMM) systems like Uniswap, slippage occurs because the price of a token changes with every trade due to the constant rebalancing of liquidity pools.
-Uniswap V2 addresses the slippage issue by introducing a mechanism called "virtual balances and reserves." This mechanism allows traders to estimate the amount of slippage before executing a trade by considering the current liquidity in the pool.
+In Automated Market Making (AMM), slippage refers to the difference between the expected price of an asset and the actual price at which the trade is executed. It occurs because the execution of a trade on an AMM platform can cause the asset price to move due to changes in the supply and demand of the assets in the pool.
+
+Uniswap V2 addresses the issue of slippage by introducing a feature called "Constant Product Market Maker" mechanism. It ensures that the product of the reserve amounts of two assets in a liquidity pool remains constant. This means that as one asset is bought, the supply of that asset decreases and the price increases, preventing large slippage.
+
+def calculate_slippage(initial_reserve_a, initial_reserve_b, trade_amount_a):
+    # Calculate the price before the trade
+    price_before_trade = initial_reserve_b / initial_reserve_a
+    
+    # Calculate the reserve after the trade
+    new_reserve_a = initial_reserve_a + trade_amount_a
+    new_reserve_b = initial_reserve_b - (price_before_trade * trade_amount_a)
+    
+    # Calculate the price after the trade
+    price_after_trade = new_reserve_b / new_reserve_a
+    
+    # Calculate the slippage
+    slippage = abs((price_after_trade - price_before_trade) / price_before_trade) * 100
+    
+    return slippage
 
 ## Problem 3
 Please examine the mint function in the UniswapV2Pair contract. Upon initial liquidity minting, a minimum liquidity is subtracted. What is the rationale behind this design?
 
-> Solution
+The rationale behind subtracting a minimum liquidity upon initial liquidity minting in the UniswapV2Pair contract is to ensure that liquidity providers contribute a meaningful amount of liquidity to the liquidity pool.
+
+By subtracting a minimum liquidity amount, Uniswap ensures that liquidity providers contribute a sufficient level of liquidity to the pool to support efficient trading. This helps prevent the liquidity pool from being fragmented into many small liquidity positions, which could lead to inefficiencies, increased slippage, and reduced trading depth.
+
+Additionally, requiring a minimum liquidity contribution incentivizes liquidity providers to contribute substantial liquidity, enhancing the overall trading experience for users and attracting more traders to the platform.
 
 ## Problem 4
 Investigate the minting function in the UniswapV2Pair contract. When depositing tokens (not for the first time), liquidity can only be obtained using a specific formula. What is the intention behind this?
 
-> Solution
+The intention behind using a specific formula for obtaining liquidity when depositing tokens (not for the first time) in the UniswapV2Pair contract is to ensure that the liquidity added to the pool is balanced relative to the existing reserves.
+
+When depositing tokens into the liquidity pool, the specific formula is used to calculate the amount of liquidity tokens (LP tokens) that the liquidity provider will receive in exchange for their deposited tokens. This formula takes into account the current reserves of the tokens in the pool and ensures that the liquidity added is proportional to the existing reserves, maintaining the balance of the pool.
+
+The formula typically calculates the amount of LP tokens using the constant product formula, which is a fundamental principle of automated market maker (AMM) systems like Uniswap. The constant product formula ensures that the product of the reserves of the tokens in the pool remains constant before and after a trade, thereby maintaining a balanced and efficient trading environment.
+
+By using a specific formula for obtaining liquidity, Uniswap ensures that liquidity providers are fairly compensated for their contributions to the liquidity pool while maintaining the integrity and efficiency of the decentralized exchange ecosystem.
+
 
 ## Problem 5
 What is a sandwich attack, and how might it impact you when initiating a swap?
 
-> Solution
+A sandwich attack is a type of market manipulation that can occur on decentralized exchanges (DEXs) like Uniswap. In a sandwich attack, an attacker exploits the predictable price movement caused by the execution of a large trade to their advantage.
 
+When initiating a swap on a decentralized exchange like Uniswap, a sandwich attack can impact you by causing:
+Slippage: You might receive fewer tokens or pay more than expected due to price manipulation by attackers.
+Front-Running: Attackers may exploit price movements caused by large trades, leading to unfavorable execution prices for your swap.
+Loss of Funds: In extreme cases, you could experience significant losses if attackers successfully manipulate prices against your trade.
