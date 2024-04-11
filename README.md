@@ -6,6 +6,7 @@ Please complete the report problem below:
 Provide your profitable path, the amountIn, amountOut value for each swap, and your final reward (your tokenB balance).
 
 Path: tokenB->tokenA->tokenE->tokenD->tokenC->tokenB
+
 amount_in: 5.0, amount_out: 5.655321988655322
 amount_in: 5.0, amount_out: 0.4865194583384165
 amount_in: 5.0, amount_out: 1.6630525437864887
